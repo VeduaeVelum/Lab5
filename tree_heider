@@ -1,0 +1,35 @@
+#ifndef __TREE_h__
+#define __TREE_h__
+#include <stdio.h>
+#include <stdio_ext.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdbool.h>
+#define STRING_LENGTH 25
+#define NUMBER_OF_COMANDS 6
+#define MIN_TREE_SIZE 1
+#define MAX_TREE_SIZE 1000
+
+struct tree
+{
+	char *information;
+	int key;
+	struct tree *left_node, *right_node;
+};
+
+void check_flag(void);
+bool create_tree(void);
+bool adding_nodes(void);
+bool read_tree_from_file(void);
+bool show_tree(struct tree *root, int temp);
+bool print_tree(struct tree *root);
+bool determine_number_of_nodes(void);
+int calculate_nodes(struct tree *root, int tree_level);
+bool delete_tree(struct tree *root);
+bool insert_node(char *string, struct tree **root);
+int define_tree_levels(struct tree *root, int temp);
+void input_string(char *string);
+int input_number_nodes(void);
+bool check_letter(void);
+
+#endif
